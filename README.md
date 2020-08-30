@@ -23,7 +23,7 @@ Network ranges that will be marked as bogon:
 
 This package also can classify the [RFC 1918 private address space](https://tools.ietf.org/html/rfc1918#section-3) and [RFC 4193 IPv6 Unicast Addresses](https://tools.ietf.org/html/rfc4193#section-3) if desired. This functionality is disabled by default, as many Zeek users run Zeek on a local network where RFC 1918 traffic is expected.
 
-To enable classifying RFC 1918/4193 private address space, add the following to your `local.zeek`:
+To enable classifying RFC 1918/4193 private address space as bogon, add the following to your `local.zeek`:
 
 ```zeek
 redef Bogon::private_as_bogon = T;
@@ -36,10 +36,14 @@ This will mark these ranges as bogon:
 * `192.168.0.0/16`
 * `fc00::/7`
 
-## To Install
+## Install
+
+This package is not currently available via the Zeek Package Manager ([pending merge](https://github.com/zeek/packages/pull/122)).
+
+However, it can still be installed using `zkg`
 
 ```
-$ zkg install zeek-bogon
+$ zkg install https://github.com/captainGeech42/zeek-bogon
 ```
 
 ## Links
