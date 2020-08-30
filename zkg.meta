@@ -1,0 +1,5 @@
+[package]
+description=Label bogon IPs in conn.log
+author=Zander Work (@captainGeech42)
+script_dir=scripts/
+tags=bogon, conn
