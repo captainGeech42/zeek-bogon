@@ -1,0 +1,12 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	conn
+#open	2020-08-30-02-08-47
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents	bogon_orig	bogon_resp
+#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]	bool	bool
+1598751961.510952	ClEkJM2Vm5giqnMf4h	10.0.10.117	5353	224.0.0.251	5353	udp	dns	-	-	-	S0	-	-	0	D	1	73	0	0	-	F	T
+1598751982.047190	C4J4Th3PJpwUYZZ6gc	10.0.10.117	5353	224.0.0.251	5353	udp	dns	-	-	-	S0	-	-	0	D	1	69	0	0	-	F	T
+1598751951.373849	CHhAvVGS1DHFjwGM9	10.0.10.115	41906	104.244.42.130	443	tcp	-	25.010344	887	387	OTH	-	-	0	^dADa	8	1303	5	647	-	F	F
+#close	2020-08-30-02-08-47
