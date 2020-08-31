@@ -39,21 +39,12 @@ global private_networks: set[subnet] = {
 function mark_as_bogon(ip: addr): bool
     {
     # check the bogon networks
-    for ( net in bogon_networks )
-        {
-        if ( ip in net )
-            return T;
-        }
-    
-    if ( private_as_bogon )
-        {
-        # need to check private networks (default no)
-        for ( net in private_networks )
-            {
-            if ( ip in net )
-                return T;
-            }
-        }
+    if ( ip in bogon_networks )
+        return T;
+
+    # need to check private networks (default no)
+    if ( private_as_bogon && ip in private_networks )
+        return T;
 
     # IP isn't bogon
     return F;
