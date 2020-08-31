@@ -38,12 +38,10 @@ This will mark these ranges as bogon:
 
 ## Install
 
-This package is not currently available via the Zeek Package Manager ([pending merge](https://github.com/zeek/packages/pull/122)).
-
-However, it can still be installed using `zkg`
+This package is available via the Zeek Package Manager:
 
 ```
-$ zkg install https://github.com/captainGeech42/zeek-bogon
+$ zkg install zeek-bogon
 ```
 
 ## Links
